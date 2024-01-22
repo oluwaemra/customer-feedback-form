@@ -1,0 +1,58 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body background="./Images/backg.png">
+    <div class="top">
+        <h1>Customer Satisfactory Survey</h1>
+        <p>Please take a few moments to completer this satisfactory survey.</p>
+    </div>
+    <div class="questions">
+        <form class="myform" action="http://localhost:9000/submitReview" method="post">
+            <label for="name" id="name" class="name">Name:</label>
+            <input type="text" id="name" name="name" class="name"><br><br>
+            <label for="question1"><strong>Overall, how satisfied were you with our texting app?</strong>
+            </label><br><br>
+            <input type="radio" id="question1" name="question1" value="Very Satisfied">Very Satisfied<br>
+            <input type="radio" id="question1" name="question1" value="Satisfied">Satisfied<br>
+            <input type="radio" id="question1" name="question1" value="Neutral">Neutral<br>
+            <input type="radio" id="question1" name="question1" value="Unsatisfied">Unsatisfied<br>
+            <input type="radio" id="question1" name="question1" value="Very Unsatisfied">Very Unsatisfied<br>
+            <input type="radio" id="question1" name="question1">N/A<br><br>
+            <label for="question2"><strong>Would you recommend our app to colleagues, family or friends?</strong>
+            </label><br><br>
+            <input type="radio" id="question2" name="question2" value="Definitely">Definitely<br>
+            <input type="radio" id="question2" name="question2" value="Probably">Probably<br>
+            <input type="radio" id="question2" name="question2" value="Neutral">Neutral<br>
+            <input type="radio" id="question2" name="question2" value="Probably not">Probably not<br>
+            <input type="radio" id="question2" name="question2" value="Definitely not">Definitely not<br><br>
+            <label for="question3"><strong>Would you use our app service in the future?</strong>
+            </label><br><br>
+            <input type="radio" id="question3" name="question3" value="Definitely">Definitely<br>
+            <input type="radio" id="question3" name="question3" value="Probably">Probably<br>
+            <input type="radio" id="question3" name="question3" value="Neutral">Neutral<br>
+            <input type="radio" id="question3" name="question3" value="Probably not">Probably not<br>
+            <input type="radio" id="question3" name="question3" value="Definitely not">Definitely not<br><br>
+            <label for="question4"><strong>How long have you used our app?</strong>
+            </label><br><br>
+            <input type="radio" id="question4" name="question4" value="Less than a month">Less than a month<br>
+            <input type="radio" id="question4" name="question4" value="1-6 months">1-6 months<br>
+            <input type="radio" id="question4" name="question4" value="1-3 years">1-3 years<br>
+            <input type="radio" id="question4" name="question4" value="over 3 years">over 3 years<br>
+            <input type="radio" id="question4" name="question4" value="Never used">Never used<br><br>
+            <label for="question5" id="question5"><strong>What problems did you have with the product?</strong></label><br><br>
+            <input type="text" id="problems" name="problems" class="name"><br><br>
+
+            <label for="feedback">Feedback:</label>
+            <textarea id="feedback" name="feedback" rows="4" required></textarea><br><br>
+
+            <button type="submit" >Submit Feedback</button>
+
+        </form>
+    </div>
+</body>
+</html>
