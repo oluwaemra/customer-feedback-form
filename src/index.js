@@ -8,12 +8,12 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-
+app.use(express.static(path.join(__dirname, "../Frontend")));
 app.post('/submitReview', async (req, res) => {
   try {
     const newReview = await collection.create(req.body);
     console.log('Review submitted successfully :', newReview);
-    return res.status(200).redirect("http://127.0.0.1:5500/Frontend/index2.html");
+    return res.status(200).redirect("index2.html");
   } catch (error) {
     console.error('Error submitting review:', error);
     return res.status(500).json({ error: 'Internal Server Error' });
