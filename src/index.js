@@ -11,8 +11,8 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, "../Frontend")));
 app.post('/submitReview', async (req, res) => {
   try {
-    const newReview = await collection.create(req.body);
-    console.log('Review submitted successfully :', newReview);
+    // const newReview = await collection.create(req.body);
+    console.log('Review submitted successfully :');
     return res.status(200).redirect("index2.html");
   } catch (error) {
     console.error('Error submitting review:', error);
